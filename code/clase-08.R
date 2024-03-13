@@ -89,11 +89,16 @@ ing_p <-pivot_wider(data=ing,
 
 ##rename
 
-ing_p <- rename(.data=ing_p, "mujer"="1", "hombre"="0")
+ing_p <- rename(.data=ing_p, "mean_mujer"="1", "mean_hombre"="0")
 
-ing_p <- mutate(ing_p, dif=mujer-hombre)
+ing_p <- mutate(ing_p, mean_dif=mean_mujer-mean_hombre)
 
-hist(ing_p$dif)
+hist(ing_p$mean_dif)
+
+
+
+
+#agregarle a eso la mediana de lo hombre, mujeres y al diferencia entre esos. En total tienen que quedar 7 columnas. 
 
 
 
